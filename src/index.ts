@@ -91,6 +91,13 @@ app.get(
   }
 );
 
+app.get(
+    '/',
+    (req: express.Request, res: express.Response): express.Response<any> => {
+      return res.send('<h1>Test</h1>');
+    }
+);
+
 app.post(
   '/create-payment-intent',
   async (
@@ -728,5 +735,5 @@ app.post('/create-checkout-session', async (req, res) => {
 
 
 app.listen(4242, (): void =>
-  console.log(`Node server listening on port ${4242}!`)
+  console.log(`Node server listening on port http://localhost:${4242}!`)
 );
