@@ -42,4 +42,3 @@ Format your code.
 
 Format your code in watch mode, waiting for file changes.
 
-# app_stripe
