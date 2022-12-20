@@ -117,7 +117,7 @@ function getKeys(payment_method) {
     }
     return { secret_key: secret_key, publishable_key: publishable_key };
 }
-app.get('/stripe-key', function (req, res) {
+app.get('/', function (req, res) {
     var publishable_key = getKeys(req.query.paymentMethod).publishable_key;
     return res.send({ publishableKey: publishable_key });
 });
